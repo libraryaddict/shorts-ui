@@ -16,10 +16,15 @@ const fightPockets = [
 	['Harem Girl', 'YR for outfit', 299, '/images/adventureimages/kg_haremgirl.gif'],
 	['Mountain Man', 'YR for 2 of each ore', 565, '/images/adventureimages/mountainman.gif'],
 	['Green Ops Soldier', 'Smoke bomb, olfact', 589, '/images/adventureimages/warhipgr.gif'],
+	['lobsterfrogman', 'olfact', 220, '/images/adventureimages/lobsterman.gif'],
+	['pufferfish', 'Pufferfish Spine', 363, '/images/adventureimages/pufferfish.gif'],
+	['War Hippy (space) cadet', 'YR for Hippy Outfit', 443, '/images/adventureimages/warhipb.gif'],
+	['War Pledge', 'YR for Frat Outfit', 568, '/images/adventureimages/fratboy.gif'],
 ];
 
 const camelsToe = ['Camel\'s Toe', '2 stars/lines, olfact', 317, '/images/adventureimages/cameltoe.gif'];
 const skinflute = ['Skinflute', '2 stars/lines, olfact', 383, '/images/adventureimages/skinflute.gif'];
+const blooper   = ['Blooper', 'White Pixel, olfact', 250, '/images/adventureimages/squid.gif'];
 
 const bellPockets = [
 	['Sizzling desk bell', 'YR source', 517, '/images/adventureimages/ccs_daughter.gif'],
@@ -84,6 +89,7 @@ const aftercoreItemPockets = [
 	['Chocolate saucepan', '+adv for Saucerors', 438, '/images/itemimages/choc4.gif'],
 	['Chocolate disco ball', '+adv for Disco Bandits', 430, '/images/itemimages/choc5.gif'],
 	['Chocolate stolen accordion', '+adv for Accordion Thieves', 189, '/images/itemimages/choc6.gif'],
+	['Handful of Bees', 'Combat item @ 100 dmg/round', 189, '/images/itemimages/bees.gif'],
 ];
 
 const App = () => {
@@ -109,7 +115,7 @@ const App = () => {
 		['Jumbo olive', 'Oil of slipperiness', 570, '/images/itemimages/olive.gif'],
 	];
 	const ascensions = ashProperties?.knownAscensions ?? 0;
-	const localFightPockets = [...fightPockets, ascensions % 2 == 0 ? skinflute : camelsToe];
+	const localFightPockets = [...fightPockets, ascensions % 2 == 0 ? skinflute : camelsToe, blooper];
 	return (
 		<div id="preact_root">
 			<PropertiesContext.Provider value={ashProperties}>
